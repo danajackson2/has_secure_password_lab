@@ -1,0 +1,7 @@
+<h2>Login</h2>
+<%=flash[:errors] if flash[:errors]%>
+<%= form_tag ({controller: 'sessions', action: 'create', method: 'post', authenticity_token:false}) do %>
+    Username: <input name=name><br>
+    Password: <input name=password type="password"><br>
+    <input type=submit value='login'>
+<% end %>
